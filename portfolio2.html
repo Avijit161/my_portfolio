@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avijit Pradhan | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #e0f7e9;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, hsl(176, 98%, 55%), #39ebb3);
+      background-size: 300% 300%;
+      animation: gradientMove 8s infinite alternate;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+      border-bottom: 3px solid #47e3c4;
+      box-shadow: 0 8px 25px rgba(3, 23, 14, 0.2);
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 6px 20px rgba(25, 238, 210, 0.6);
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-top: 15px;
+    }
+    header h3 {
+      font-weight: 400;
+      margin: 8px 0;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: left;}
+      100% {background-position: right;}
+    }
+
+    /* Navbar */
+    nav {
+      background: rgba(0, 0, 0, 0.329);
+      padding: 14px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    nav a {
+      color: #a8e063;
+      margin: 0 20px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #2bdfe2;
+      text-shadow: 0 0 8px #00ff88;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #1fb5c6;
+      text-shadow: 0 0 8px rgba(0,255,136,0.6);
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 14px;
+      margin: 20px 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      border: 1px solid rgba(0,255,136,0.3);
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 25px rgba(0,255,136,0.3);
+    }
+
+    /* Skills */
+    .skills-bar {
+      margin: 10px 0;
+    }
+    .bar {
+      height: 10px;
+      border-radius: 5px;
+      background: #333;
+      overflow: hidden;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      border-radius: 5px;
+      animation: grow 2s ease-out;
+    }
+    .c {width: 85%; background: linear-gradient(90deg,#00ff88,#1affd5);}
+    .cpp {width: 75%; background: linear-gradient(90deg,#00ff88,#33cc33);}
+    .py {width: 70%; background: linear-gradient(90deg,#56ab2f,#a8e063);}
+    .java {width: 60%; background: linear-gradient(90deg,#11998e,#38ef7d);}
+    .html {width: 80%; background: linear-gradient(90deg,#00ff88,#1aebff);}
+    .css {width: 75%; background: linear-gradient(90deg,#43cea2,#185a9d);}
+
+    @keyframes grow {
+      from {width: 0;}
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: linear-gradient(135deg,#00ff88,#38ef7d);
+      padding: 20px;
+      border-radius: 12px;
+      color: #0f2027;
+      transition: 0.3s;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      font-weight: 500;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 26px rgba(0,255,136,0.4);
+    }
+
+    /* Contact */
+    .contact p, .contact a {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .contact a {
+      color: #00ff88;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-shadow: 0 0 8px #00ff88;
+    }
+
+    footer {
+      background: #0f2027;
+      color: #a8e063;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      border-top: 2px solid #00ff88;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/avijit.jpg" alt="Profile Photo">
+    <h1>Avijit Pradhan</h1>
+    <h3>2nd Year CSE (AIML) Student</h3>
+    <p>Netaji Subhas Engineering College</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        Hi! I'm <b>Avijit Pradhan</b>, a <b>2nd Year CSE student</b> specializing in <b>Artificial Intelligence & Machine Learning</b> at <b>Netaji Subhas Engineering College</b>.  
+      </p>
+      <p>
+        I'm passionate about <b>technology, problem-solving, and innovation</b>. I enjoy exploring areas like <b>Machine Learning, Web Development, and Data Structures</b>.  
+      </p>
+      <p>
+        My aim is to grow as an <b>AI/ML Engineer</b>, create impactful projects, and contribute to open-source communities.  
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <p>C</p>
+      <div class="skills-bar"><div class="bar"><span class="c"></span></div></div>
+      <p>C++</p>
+      <div class="skills-bar"><div class="bar"><span class="cpp"></span></div></div>
+      <p>Python</p>
+      <div class="skills-bar"><div class="bar"><span class="py"></span></div></div>
+      <p>Java</p>
+      <div class="skills-bar"><div class="bar"><span class="java"></span></div></div>
+      <p>HTML</p>
+      <div class="skills-bar"><div class="bar"><span class="html"></span></div></div>
+      <p>CSS</p>
+      <div class="skills-bar"><div class="bar"><span class="css"></span></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>🌐 Portfolio Website</h3>
+        <p>A modern personal portfolio built with HTML & CSS.</p>
+      </div>
+      <div class="project-card">
+        <h3>🤖 AI Chatbot</h3>
+        <p>A simple chatbot built in Python to answer queries.</p>
+      </div>
+      <div class="project-card">
+        <h3>📚 Student Management System</h3>
+        <p>Console-based project in C++ for student records.</p>
+      </div>
+      <div class="project-card">
+        <h3>✍ Handwritten Digit Recognition</h3>
+        <p>ML project using Python & MNIST dataset.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card contact">
+      <p>Email: <a href="mailto:avijitpradhan318@gmail.com">avijitpradhan318@gmail.com</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/avijit-pradhan-57b86a354">LinkedIn</a> | 
+        <a href="https://github.com/Avijit161">GitHub</a> | 
+        <a href="https://www.instagram.com/___your___avijit___18___?igsh=MTU5Zm40cHk5b2Y1NA==">Instagram</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Avijit Pradhan 
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
